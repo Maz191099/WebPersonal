@@ -10,23 +10,13 @@ html_base = """
 """
 # Create your views here.
 def home(request):
-    return HttpResponse(html_base + """
-        <p>Portada</p>
-    """)
+    return render(request, "core/home.html")
 
 def about(request):
-    return HttpResponse(html_base + """
-        <h2>Acerca de</h2>
-        <p>Hola yo soy Miguel</p>
-    """)
+    return render(request, "core/about.html")
 
 def contact(request):
-    return HttpResponse(html_base + """
-    <h2>Contacto</h2>
-    <p>Ponte en contacto conmigo a través de correo electrónico y Facebook.</p>
-    """)
+    return render(request, "core/contact.html")
 
 def portfolio(request):
-    return HttpResponse(html_base + """<h2>Portafolio</h2>
-    <p>Mis Trabajos</p>
-    """)
+    return render(request, "core/portfolio.html")
